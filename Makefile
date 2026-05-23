@@ -23,14 +23,14 @@
 KDIR := /lib/modules/$(shell uname -r)/build
 
 all:
-	make -C $(KDIR) M=$(PWD) $(MAKEFLAGS) modules
+	make -C $(KDIR) M=$(PWD) CONFIG_MODULE_SIG=n $(MAKEFLAGS) modules
 
 install: all
-	make -C $(KDIR) M=$(PWD) $(MAKEFLAGS) modules_install
+	make -C $(KDIR) M=$(PWD) CONFIG_MODULE_SIG=n $(MAKEFLAGS) modules_install
 	cp -r usr /
 
 clean:
-	make -C $(KDIR) M=$(PWD) $(MAKEFLAGS) clean
+	make -C $(KDIR) M=$(PWD) CONFIG_MODULE_SIG=n $(MAKEFLAGS) clean
 	rm -rf build/
 
 package: package-deb package-rpm package-alpm

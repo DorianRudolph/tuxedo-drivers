@@ -216,6 +216,14 @@ static const struct dmi_system_id tuxedo_dmi_string_match[] = {
 			DMI_MATCH(DMI_CHASSIS_VENDOR, "TUXEDO"),
 		},
 	},
+	{
+		.matches = {
+			DMI_MATCH(DMI_SYS_VENDOR, "SchenkerTechnologiesGmbH"),
+			DMI_MATCH(DMI_PRODUCT_NAME, "XMG EVO (M24)"),
+			DMI_MATCH(DMI_BOARD_VENDOR, "NB02"),
+			DMI_MATCH(DMI_BOARD_NAME, "GXxHRXx"),
+		},
+	},
 	{ }
 };
 

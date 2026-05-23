@@ -246,6 +246,12 @@ static const struct dmi_system_id kbl_type_fixed_color_5_levels[] = {
 	},
 	{
 		.matches = {
+			DMI_MATCH(DMI_SYS_VENDOR, "SchenkerTechnologiesGmbH"),
+			DMI_MATCH(DMI_BOARD_NAME, "GXxHRXx"),
+		},
+	},
+	{
+		.matches = {
 			DMI_MATCH(DMI_SYS_VENDOR, "TUXEDO"),
 			DMI_MATCH(DMI_BOARD_NAME, "GXxMRXx"),
 		},
